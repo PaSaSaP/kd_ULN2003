@@ -44,5 +44,10 @@ void stepperMotor_step(int noOfSteps) {
             }
         }
     }
+
+    // at the end disable all pins
+    for (int d = 0; d < 4; ++d) {
+        digitalWrite(stepperMotor_inputPins[d], LOW); 
+    }
 }
 
